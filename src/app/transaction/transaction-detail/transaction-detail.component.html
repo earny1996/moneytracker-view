@@ -1,1 +1,121 @@
-<p>transaction-detail works!</p>
+<div id="detailcontent" *ngIf="transaction">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 d-flex justify-content-center">
+                <h3>{{transaction.title}}</h3>
+            </div>
+        </div>
+        <div class="row label">
+            <div class="col-md-3 col-lg-3"></div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+                <label>Id:</label> 
+            </div>
+            <div class="col-md-3 col-lg-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-lg-3"></div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+                <input type="number" class="form-control" disabled="true" value="{{transaction.id}}"/>
+            </div>
+            <div class="col-md-3 col-lg-3"></div>
+        </div>
+        <div class="row label">
+            <div class="col-md-3 col-lg-3"></div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+                <label>Titel:</label> 
+            </div>
+            <div class="col-md-3 col-lg-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-lg-3"></div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+                <input id="namefield" type="text" class="form-control" value="{{transaction.title}}" disabled="true"/>
+            </div>
+            <div class="col-md-3 col-lg-3"></div>
+        </div>
+        <div class="row label">
+            <div class="col-md-3 col-lg-3"></div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+                <label>Beschreibung:</label> 
+            </div>
+            <div class="col-md-3 col-lg-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-lg-3"></div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+                <input class="form-control" type="text" value="{{transaction.description}}" disabled="true"/>
+            </div>
+            <div class="col-md-3 col-lg-3"></div>
+        </div>
+        <div class="row label">
+            <div class="col-md-3 col-lg-3"></div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+                <label>Von Account:</label> 
+            </div>
+            <div class="col-md-3 col-lg-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-lg-3"></div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+                <input class="form-control" type="text" value="{{transaction.fromAccount.name}}" disabled="true" />
+            </div>
+            <div class="col-md-3 col-lg-3"></div>
+        </div>
+        <div class="row label">
+            <div class="col-md-3 col-lg-3"></div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+                <label>Zu Account:</label> 
+            </div>
+            <div class="col-md-3 col-lg-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-lg-3"></div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+                <input class="form-control" type="text" value="{{transaction.toAccount.name}}" disabled="true" />
+            </div>
+            <div class="col-md-3 col-lg-3"></div>
+        </div>
+        <div class="row label">
+            <div class="col-md-3 col-lg-3"></div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+                <label>Betrag:</label> 
+            </div>
+            <div class="col-md-3 col-lg-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-lg-3"></div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+                <input class="form-control" type="number" value="{{transaction.amount}}" disabled="true" />
+            </div>
+            <div class="col-md-3 col-lg-3"></div>
+        </div>
+        <div class="row label">
+            <div class="col-md-3 col-lg-3"></div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+                <label>Transaktion ausgeführt:</label> 
+            </div>
+            <div class="col-md-3 col-lg-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-lg-3"></div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+                <input class="form-control" type="text" value="{{transaction.executedDate}}" disabled="true" />
+            </div>
+            <div class="col-md-3 col-lg-3"></div>
+        </div>
+        <div class="row label">
+            <div class="col-md-3 col-lg-3"></div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+                <label>Eintrag erstellt:</label> 
+            </div>
+            <div class="col-md-3 col-lg-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-lg-3"></div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+                <input class="form-control" type="text" value="{{transaction.createdDate}}" disabled="true" />
+            </div>
+            <div class="col-md-3 col-lg-3"></div>
+        </div>
+    </div>
+</div>

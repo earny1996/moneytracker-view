@@ -1,11 +1,17 @@
+import { Component, ContentChild } from "@angular/core";
+import { Account } from "./account";
+
+@Component({
+    template: ''
+  })
 export class Transaction {
     id: number;
     title: string;
     description: string;
     //TODO: fkuser
-    fromAccount: Account;
-    toAccount: Account;
+    @ContentChild(Account) fromAccount: Account;
+    @ContentChild(Account) toAccount: Account;
     amount: number;
-    executedDate: Date;
-    createdDate: Date;
+    executedDate: string;
+    createdDate: string;
 }

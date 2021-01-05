@@ -14,4 +14,9 @@ export class TransactionService {
     // TODO: call backend and get user accounts
     return of(TRANSACTIONS);
   }
+
+  getTransactionById(id: number): Observable<Transaction> {
+    // TODO: call backend and get user accounts
+    return of(TRANSACTIONS.find(transaction => transaction.id === id));
+  }
 }

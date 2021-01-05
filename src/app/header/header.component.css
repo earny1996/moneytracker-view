@@ -13,3 +13,7 @@
 .openbtn:hover {
   background-color: #444;
 }
+
+#header {
+  margin-right: 0px!important;
+}
