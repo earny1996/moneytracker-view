@@ -1,1 +1,107 @@
-<p>transaction-create works!</p>
+<div id="detailcontent" class="container">
+    <div class="row justify-content-center">
+        <div>
+            <h3>Neue Transaktion</h3>
+        </div>
+    </div>
+    <form id="newTransaction">
+        <div class="row label">
+            <div class="col-md-3 col-lg-3"></div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <label>Titel</label>
+            </div>
+            <div class="col-md-3 col-lg-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-lg-3"></div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <input type="text" class="form-control" name="titlefield" id="namefield" placeholder="Titel" minlength="1" required>
+            </div>
+            <div class="col-md-3 col-lg-3"></div>
+        </div>
+        <div class="row label">
+            <div class="col-md-3 col-lg-3"></div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <label>Nähere Infos</label>
+            </div>
+            <div class="col-md-3 col-lg-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-lg-3"></div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <textarea form="newTransaction" class="form-control"></textarea>
+            </div>
+            <div class="col-md-3 col-lg-3"></div>
+        </div>
+        <div class="row label">
+            <div class="col-md-3 col-lg-3"></div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <label>Von Konto</label>
+            </div>
+            <div class="col-md-3 col-lg-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-lg-3"></div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <select id="fromAcccountField" form="newTransaction" class="form-control" name="fromAcccountField" required>
+                    <option value="" selected disabled>Select your option</option>
+                    <option *ngFor="let account of accounts" value="{{account.id}}">{{account.name}}</option>
+                </select>
+            </div>
+            <div class="col-md-3 col-lg-3"></div>
+        </div>
+        <div class="row label">
+            <div class="col-md-3 col-lg-3"></div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <label>Zu Konto</label>
+            </div>
+            <div class="col-md-3 col-lg-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-lg-3"></div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <select id="fromAcccountField" form="newTransaction" class="form-control" name="fromAcccountField" required>
+                    <option value="" selected disabled>Select your option</option>
+                    <option *ngFor="let account of accounts" value="{{account.id}}">{{account.name}}</option>
+                </select>
+            </div>
+            <div class="col-md-3 col-lg-3"></div>
+        </div>
+        <div class="row label">
+            <div class="col-md-3 col-lg-3"></div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <label>Betrag</label>
+            </div>
+            <div class="col-md-3 col-lg-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-lg-3"></div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <input name="valuefield" type="number" class="form-control" placeholder="Betrag">
+            </div>
+            <div class="col-md-3 col-lg-3"></div>
+        </div>
+        <div class="row label">
+            <div class="col-md-3 col-lg-3"></div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <label>Ausgeführt am</label>
+            </div>
+            <div class="col-md-3 col-lg-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-lg-3"></div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <input name="executeddatetimefield" type="datetime-local" class="form-control" placeholder="dd.mm.yyyy hh:ss">
+            </div>
+            <div class="col-md-3 col-lg-3"></div>
+        </div>
+        
+        <div class="row savebutton">
+            <div class="col-md-3 col-lg-3"></div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <button class="btn btn-primary" (click)="create()">Speichern</button>
+            </div>
+            <div class="col-md-3 col-lg-3"></div>
+        </div>
+    </form>
+</div>
