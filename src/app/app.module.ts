@@ -15,6 +15,7 @@ import { AccountCreateComponent } from './account-create/account-create.componen
 import { TransactionsComponent } from './transaction/transactions/transactions.component';
 import { TransactionDetailComponent } from './transaction/transaction-detail/transaction-detail.component';
 import { TransactionCreateComponent } from './transaction/transaction-create/transaction-create.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { TransactionCreateComponent } from './transaction/transaction-create/tra
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule, ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

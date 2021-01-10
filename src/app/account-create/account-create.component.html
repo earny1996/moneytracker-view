@@ -4,47 +4,48 @@
             <h3>Create a new Account</h3>
         </div>
     </div>
-    <form>
+    <form [formGroup]="newaccount" (submit)="create()">
         <div class="row label">
             <div class="col-md-3 col-lg-3"></div>
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                <label>Name</label>
+                <label class="control-label required">Name</label>
             </div>
             <div class="col-md-3 col-lg-3"></div>
         </div>
         <div class="row">
             <div class="col-md-3 col-lg-3"></div>
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                <input type="text" class="form-control" name="namefield" id="namefield" placeholder="Name" minlength="1" required>
+                <input type="text" class="form-control" name="namefield" id="namefield" placeholder="Name" minlength="1" formControlName="name" required>
             </div>
             <div class="col-md-3 col-lg-3"></div>
         </div>
         <div class="row label">
             <div class="col-md-3 col-lg-3"></div>
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                <label>Wert</label>
+                <label class="control-label required">Wert</label>
             </div>
             <div class="col-md-3 col-lg-3"></div>
         </div>
         <div class="row">
             <div class="col-md-3 col-lg-3"></div>
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                <input type="number" class="form-control" name="valuefield" id="valuefield" placeholder="Wert" minlength="1" step="0.01" required>
+                <input type="number" class="form-control" name="valuefield" id="valuefield" placeholder="Wert" minlength="1" step="0.01" formControlName="value" required>
             </div>
             <div class="col-md-3 col-lg-3"></div>
         </div>
         <div class="row label">
             <div class="col-md-3 col-lg-3"></div>
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                <label>Währung</label>
+                <label class="control-label required">Währung</label>
             </div>
             <div class="col-md-3 col-lg-3"></div>
         </div>
         <div class="row">
             <div class="col-md-3 col-lg-3"></div>
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                <select id="currencyfield" class="form-control" name="currencyfield" id="currencyfield">
-                    <option value="EUR" selected>Euro</option>
+                <select id="currencyfield" class="form-control" name="currencyfield" id="currencyfield" formControlName="currency" required>
+                    <option value="" selected disabled>Select your option</option>
+                    <option value="EUR">Euro</option>
                     <option value="USD">US Dollar</option>
                   </select>
             </div>
@@ -54,7 +55,7 @@
         <div class="row savebutton">
             <div class="col-md-3 col-lg-3"></div>
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                <button class="btn btn-primary" (click)="create()">Speichern</button>
+                <button class="btn btn-primary" [disabled]="!newaccount.valid">Speichern</button>
             </div>
             <div class="col-md-3 col-lg-3"></div>
         </div>

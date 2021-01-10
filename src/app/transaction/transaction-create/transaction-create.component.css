@@ -9,3 +9,11 @@
 #detailcontent {
     padding-bottom: 10vh;
 }
+
+.control-label.required:after { 
+    color: #d00;
+    content: "*";
+    position: absolute;
+    margin-left: 5px;
+    font-weight: bold;
+  }

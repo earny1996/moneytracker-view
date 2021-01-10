@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AccountServiceService} from '../services/account/account-service.service';
 
 @Component({
@@ -8,9 +9,16 @@ import { AccountServiceService} from '../services/account/account-service.servic
 })
 export class AccountCreateComponent implements OnInit {
 
-  constructor(private accountService: AccountServiceService) { }
+  constructor(private accountService: AccountServiceService, private formBuilder: FormBuilder) { }
 
+  newaccount: FormGroup;
+  
   ngOnInit(): void {
+    this.newaccount = this.formBuilder.group({
+      name: [null, [Validators.required]],
+      value: [null, Validators.required],
+      currency: [null, Validators.required]
+    });
   }
 
   async create() {
